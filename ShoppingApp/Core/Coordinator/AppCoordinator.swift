@@ -22,6 +22,9 @@ final class AppCoordinator: ObservableObject {
     }
 
     enum Sheet: Identifiable {
+        case mock
+        case createFolder
+        case createList
 
         var id: String {
             UUID().uuidString
@@ -68,11 +71,15 @@ final class AppCoordinator: ObservableObject {
         }
     }
 
-//    @ViewBuilder
-//    func build(_ page: Sheet) -> some View {
-//        switch page {
-//        default:
-//            OnboardingView()
-//        }
-//    }
+    @ViewBuilder
+    func build(_ page: Sheet) -> some View {
+        switch page {
+        case .createFolder:
+            CreateFolderView()
+        case .createList:
+            CreateListView()
+        default:
+            MockView()
+        }
+    }
 }

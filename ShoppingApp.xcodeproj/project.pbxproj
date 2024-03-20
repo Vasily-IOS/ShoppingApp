@@ -25,6 +25,13 @@
 		FF330D812BA8FDB100CEC039 /* OnboardingShownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF330D802BA8FDB100CEC039 /* OnboardingShownView.swift */; };
 		FF330D832BA8FDBF00CEC039 /* OnboardingNotShowedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF330D822BA8FDBF00CEC039 /* OnboardingNotShowedView.swift */; };
 		FF330D852BA903BA00CEC039 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF330D842BA903BA00CEC039 /* PageControl.swift */; };
+		FF8910192BA9A0DD006381B4 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8910182BA9A0DD006381B4 /* MainModel.swift */; };
+		FF89101B2BA9A0E6006381B4 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF89101A2BA9A0E6006381B4 /* MainViewModel.swift */; };
+		FFA91CCF2BAB269B00038C89 /* MockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA91CCE2BAB269B00038C89 /* MockView.swift */; };
+		FFA91CD22BAB286900038C89 /* CreateFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA91CD12BAB286900038C89 /* CreateFolderView.swift */; };
+		FFA91CD42BAB287700038C89 /* CreateFolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA91CD32BAB287700038C89 /* CreateFolderViewModel.swift */; };
+		FFA91CD82BAB315100038C89 /* CreateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA91CD72BAB315100038C89 /* CreateListView.swift */; };
+		FFA91CDA2BAB316100038C89 /* CreateListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA91CD92BAB316100038C89 /* CreateListViewModel.swift */; };
 		FFDB1BE32B98DBB30006523A /* ShoppingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDB1BE22B98DBB30006523A /* ShoppingApp.swift */; };
 		FFDB1BE52B98DBB30006523A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDB1BE42B98DBB30006523A /* ContentView.swift */; };
 		FFDB1BE72B98DBB40006523A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFDB1BE62B98DBB40006523A /* Assets.xcassets */; };
@@ -70,6 +77,13 @@
 		FF330D802BA8FDB100CEC039 /* OnboardingShownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingShownView.swift; sourceTree = "<group>"; };
 		FF330D822BA8FDBF00CEC039 /* OnboardingNotShowedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNotShowedView.swift; sourceTree = "<group>"; };
 		FF330D842BA903BA00CEC039 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		FF8910182BA9A0DD006381B4 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		FF89101A2BA9A0E6006381B4 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		FFA91CCE2BAB269B00038C89 /* MockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockView.swift; sourceTree = "<group>"; };
+		FFA91CD12BAB286900038C89 /* CreateFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFolderView.swift; sourceTree = "<group>"; };
+		FFA91CD32BAB287700038C89 /* CreateFolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFolderViewModel.swift; sourceTree = "<group>"; };
+		FFA91CD72BAB315100038C89 /* CreateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListView.swift; sourceTree = "<group>"; };
+		FFA91CD92BAB316100038C89 /* CreateListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListViewModel.swift; sourceTree = "<group>"; };
 		FFDB1BDF2B98DBB30006523A /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFDB1BE22B98DBB30006523A /* ShoppingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingApp.swift; sourceTree = "<group>"; };
 		FFDB1BE42B98DBB30006523A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +124,8 @@
 		FF330D552BA8B41D00CEC039 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				FFA91CCE2BAB269B00038C89 /* MockView.swift */,
+				FFA91CD52BAB312200038C89 /*  Sheets */,
 				FF330D742BA8D63300CEC039 /* Main */,
 				FF330D612BA8BD0700CEC039 /* EnterName */,
 				FF330D582BA8B46700CEC039 /* Onboarding */,
@@ -173,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				FF330D752BA8D63E00CEC039 /* MainView.swift */,
+				FF89101A2BA9A0E6006381B4 /* MainViewModel.swift */,
+				FF8910182BA9A0DD006381B4 /* MainModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -202,6 +220,33 @@
 				FF330D7E2BA8FA4100CEC039 /* OnboardingService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FFA91CD02BAB282B00038C89 /* CreateFolder */ = {
+			isa = PBXGroup;
+			children = (
+				FFA91CD12BAB286900038C89 /* CreateFolderView.swift */,
+				FFA91CD32BAB287700038C89 /* CreateFolderViewModel.swift */,
+			);
+			path = CreateFolder;
+			sourceTree = "<group>";
+		};
+		FFA91CD52BAB312200038C89 /*  Sheets */ = {
+			isa = PBXGroup;
+			children = (
+				FFA91CD02BAB282B00038C89 /* CreateFolder */,
+				FFA91CD62BAB313F00038C89 /* CreateList */,
+			);
+			path = " Sheets";
+			sourceTree = "<group>";
+		};
+		FFA91CD62BAB313F00038C89 /* CreateList */ = {
+			isa = PBXGroup;
+			children = (
+				FFA91CD72BAB315100038C89 /* CreateListView.swift */,
+				FFA91CD92BAB316100038C89 /* CreateListViewModel.swift */,
+			);
+			path = CreateList;
 			sourceTree = "<group>";
 		};
 		FFDB1BD62B98DBB30006523A = {
@@ -392,9 +437,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF330D6F2BA8CF5000CEC039 /* AppCoordinator.swift in Sources */,
+				FFA91CD42BAB287700038C89 /* CreateFolderViewModel.swift in Sources */,
 				FF330D812BA8FDB100CEC039 /* OnboardingShownView.swift in Sources */,
 				FF330D762BA8D63E00CEC039 /* MainView.swift in Sources */,
 				FF330D5A2BA8B48E00CEC039 /* SplashScreen.swift in Sources */,
+				FFA91CDA2BAB316100038C89 /* CreateListViewModel.swift in Sources */,
 				FF330D672BA8C7E000CEC039 /* Extension + View.swift in Sources */,
 				FF330D832BA8FDBF00CEC039 /* OnboardingNotShowedView.swift in Sources */,
 				FF330D692BA8CDCE00CEC039 /* EnterNameViewModel.swift in Sources */,
@@ -408,9 +455,14 @@
 				FF330D782BA8D82D00CEC039 /* OnboardingModel.swift in Sources */,
 				FF330D732BA8D4FD00CEC039 /* Config.swift in Sources */,
 				FFDB1BE52B98DBB30006523A /* ContentView.swift in Sources */,
+				FFA91CCF2BAB269B00038C89 /* MockView.swift in Sources */,
+				FF8910192BA9A0DD006381B4 /* MainModel.swift in Sources */,
 				FFDB1BE32B98DBB30006523A /* ShoppingApp.swift in Sources */,
+				FFA91CD22BAB286900038C89 /* CreateFolderView.swift in Sources */,
 				FF330D7C2BA8DE8A00CEC039 /* OnboardingPageView.swift in Sources */,
 				FF330D7F2BA8FA4100CEC039 /* OnboardingService.swift in Sources */,
+				FFA91CD82BAB315100038C89 /* CreateListView.swift in Sources */,
+				FF89101B2BA9A0E6006381B4 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,11 +629,11 @@
 				DEVELOPMENT_TEAM = 9TT2NS548Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Покупайка!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -607,11 +659,11 @@
 				DEVELOPMENT_TEAM = 9TT2NS548Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Покупайка!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -634,7 +686,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = m.ShoppingAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -653,7 +705,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = m.ShoppingAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -671,6 +723,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = m.ShoppingAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -688,6 +741,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = m.ShoppingAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

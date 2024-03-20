@@ -19,6 +19,10 @@ struct OnboardingShownView: View {
                 .navigationDestination(for: AppCoordinator.Page.self) { page in
                     coordinator.build(page)
                 }
+                .sheet(item: $coordinator.sheet) { sheet in
+                    coordinator.build(sheet)
+                        .presentationDetents([.fraction(0.3)])
+                }
         }
         .environmentObject(coordinator)
     }
