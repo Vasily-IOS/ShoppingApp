@@ -19,7 +19,7 @@ struct ShoppingApp: App {
             if isCanHideSplash {
                 ContentView()
             } else {
-                SplashScreen(isCanHide: $isCanHideSplash)        
+                SplashScreen(isCanHide: $isCanHideSplash)
             }
         }
     }

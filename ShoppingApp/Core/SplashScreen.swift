@@ -28,6 +28,5 @@ struct SplashScreen: View {
         }
         .padding(.horizontal)
         .background(Color(uiColor: .mainOrange))
-        .ignoresSafeArea()
     }
 }

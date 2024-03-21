@@ -7,13 +7,12 @@
 
 import SwiftUI
 
-struct FolderModel: Identifiable {
+struct BaseFolderModel: Identifiable {
     var id = UUID()
     var name: String
-    var emptyFolderImage: Image?
 
     static let model: [Self] = [
-        .init(name: "Все"),
-        .init(name: "Избранное")
+        .init(name: AssetString.all.rawValue),
+        .init(name: AssetString.favourites.rawValue)
     ]
 }

@@ -20,7 +20,6 @@ struct CreateListView: View {
             Text(AssetString.newList.rawValue)
                 .font(.system(size: 20, weight: .medium))
 
-            
             TextField("", text: $viewModel.newListName, prompt: Text(AssetString.listNamе.rawValue)
                 .font(.system(size: 16)))
                 .padding(.horizontal, 16)

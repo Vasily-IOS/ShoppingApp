@@ -19,6 +19,7 @@ struct MainView: View {
 
     var body: some View {
         ZStack {
+            // Главный экран
             GeometryReader { geo in
                 VStack(alignment: .center) {
                     HStack {
@@ -36,14 +37,15 @@ struct MainView: View {
                                     VStack(spacing: 5) {
                                         Text(folder.name)
                                             .font(.system(size: 20))
-                                            .foregroundColor(viewModel.selectedFolderModelID == folder.id ? .black : .black.opacity(0.38))
+                                            .foregroundColor(viewModel.selectedBaseFolderModelID == folder.id ? .black : .black.opacity(0.38))
+                                            .padding(.horizontal, 5)
 
                                         Rectangle()
                                             .frame(height: 1)
-                                            .foregroundColor(viewModel.selectedFolderModelID == folder.id ? Color(uiColor: .mainOrange) : .clear)
+                                            .foregroundColor(viewModel.selectedBaseFolderModelID == folder.id ? Color(uiColor: .mainOrange) : .clear)
                                     }
                                     .onTapGesture {
-                                        viewModel.selectedFolderModelID = folder.id
+                                        viewModel.selectedBaseFolderModelID = folder.id
                                     }
                                 }
                             }
@@ -58,17 +60,28 @@ struct MainView: View {
                         }
                     }
                     .padding(.horizontal, 16)
+                    .padding(.top, 16)
                     .hidden(!viewModel.isMainShows)
 
                     VStack {
-                        AssetImage.emptyList.image
+                        (viewModel.selectedBaseFolderModelID == viewModel.folderModel.first?.id) ? AssetImage.emptyList.image : AssetImage.favoriteList.image
 
-                        Text(AssetString.youHaveNoListsYet.rawValue)
-                            .font(.system(size: 24, weight: .bold))
-                            .multilineTextAlignment(.center)
-                        Text(AssetString.createListRightNow.rawValue)
-                            .font(.system(size: 20, weight: .light))
+                        ZStack {
+                            Text(AssetString.haveNoFavouritesListsYet.rawValue)
+                                .font(.system(size: 24, weight: .bold))
+                                .multilineTextAlignment(.center)
+                                .hidden(viewModel.isFirstFolder())
+                                .padding(.horizontal, 16)
 
+                            VStack {
+                                Text(AssetString.youHaveNoListsYet.rawValue)
+                                    .font(.system(size: 24, weight: .bold))
+                                    .multilineTextAlignment(.center)
+                                Text(AssetString.createListRightNow.rawValue)
+                                    .font(.system(size: 20, weight: .light))
+                            }
+                            .hidden(!viewModel.isFirstFolder())
+                        }
                     }
                     .padding(.top, 40)
                     .hidden(!viewModel.isMainShows)
@@ -130,26 +143,101 @@ struct MainView: View {
                         )
                     )
                     .shadow(color: .black, radius: 5, x: 0, y: 5)
+                    .frame(height: geo.size.height * 0.1)
                 }
                 .edgesIgnoringSafeArea(.bottom)
                 .padding(.top, 30)
             }
 
+            // Экран настроек
             GeometryReader { geometry in
                 VStack {
-                    Spacer()
-                    HStack {
-                        AssetImage.avatar.image
-                        Text("Привет, \(userName ?? "Друг")!")
-                            .foregroundColor(.white)
-                            .font(.system(size: 24, weight: .bold))
+                    VStack {
                         Spacer()
+                        HStack {
+                            AssetImage.avatar.image
+                            Text("Привет, \(userName ?? "Друг")!")
+                                .foregroundColor(.white)
+                                .font(.system(size: 24, weight: .bold))
+                            Spacer()
+                        }
+                        .padding(.leading, 16)
+                        .padding(.bottom, 16)
                     }
-                    .padding(.leading, 16)
-                    .padding(.bottom, 16)
+                    .frame(height: geometry.size.height * 0.2)
+                    .background(Color(uiColor: .mainOrange))
+
+                    Button {
+                        print("Go to settings")
+                    } label: {
+                        HStack {
+                            Color.white
+                                .overlay {
+                                    HStack {
+                                        Text(AssetString.appLanguage.rawValue)
+                                            .foregroundColor(.black)
+                                            .font(.system(size: 20, weight: .light))
+                                        Spacer()
+                                        AssetImage.rightArrow.image
+                                    }
+                                    .padding(.horizontal, 16)
+                                }
+                        }
+                        .frame(height: 50)
+                        .cornerRadius(10)
+                        .padding(.horizontal, 16)
+                        .shadow(color: .black.opacity(0.2), radius: 3, x: 0, y: 0)
+                        .clipShape(
+                            .rect(
+                                topLeadingRadius: 0,
+                                bottomLeadingRadius: 0,
+                                bottomTrailingRadius: 0,
+                                topTrailingRadius: 0
+                            )
+                        )
+                    }
+                    .padding(.top)
+
+                    Button {
+                        print("Go to about app screen")
+                    } label: {
+                        HStack {
+                            Color.white
+                                .overlay {
+                                    HStack {
+                                        Text(AssetString.aboutApp.rawValue)
+                                            .foregroundColor(.black)
+                                            .font(.system(size: 20, weight: .light))
+                                        Spacer()
+                                        AssetImage.rightArrow.image
+                                    }
+                                    .padding(.horizontal, 16)
+                                }
+                        }
+                        .frame(height: 50)
+                        .cornerRadius(10)
+                        .padding(.horizontal, 16)
+                        .shadow(color: .black.opacity(0.2), radius: 3, x: 0, y: 0)
+                        .clipShape(
+                            .rect(
+                                topLeadingRadius: 0,
+                                bottomLeadingRadius: 0,
+                                bottomTrailingRadius: 0,
+                                topTrailingRadius: 0
+                            )
+                        )
+                    }
+                    .padding(.top, 0)
+
+                    VStack {
+                        Spacer()
+                        Rectangle()
+                            .fill(Color(uiColor: .mainOrange))
+                            .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.25)
+                            .cornerRadius(30)
+                    }
+                    .padding(.bottom, geometry.size.height * 0.15)
                 }
-                .frame(height: geometry.size.height * 0.2)
-                .background(Color(uiColor: .mainOrange))
             }
             .edgesIgnoringSafeArea(.top)
             .hidden(viewModel.isMainShows)

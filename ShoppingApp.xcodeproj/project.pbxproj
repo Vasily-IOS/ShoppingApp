@@ -125,10 +125,10 @@
 			isa = PBXGroup;
 			children = (
 				FFA91CCE2BAB269B00038C89 /* MockView.swift */,
-				FFA91CD52BAB312200038C89 /*  Sheets */,
 				FF330D742BA8D63300CEC039 /* Main */,
 				FF330D612BA8BD0700CEC039 /* EnterName */,
 				FF330D582BA8B46700CEC039 /* Onboarding */,
+				FFA91CD52BAB312200038C89 /*  Sheets */,
 			);
 			path = Features;
 			sourceTree = "<group>";

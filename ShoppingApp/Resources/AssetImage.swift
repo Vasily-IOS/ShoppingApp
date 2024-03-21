@@ -13,16 +13,15 @@ enum AssetImage {
     case onboardingOne
     case onboardingTwo
     case onboardingThree
-    
     case selectedLists
     case unselectedLists
     case selectedSettings
     case unselectesdSetting
-
     case addFolder
     case emptyList
     case favoriteList
     case avatar
+    case rightArrow
 
     var image: Image {
         switch self {
@@ -52,6 +51,8 @@ enum AssetImage {
             return Image("favoriteList_icon")
         case .avatar:
             return Image("avatar_icon")
+        case .rightArrow:
+            return Image("rightArrow_icon")
         }
     }
 }

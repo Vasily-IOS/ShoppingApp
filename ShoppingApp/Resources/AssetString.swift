@@ -33,4 +33,9 @@ enum AssetString: String {
     case save = "Сохранить"
     case newList = "Новый список"
     case listNamе = "Имя списка"
+    case all = "Все"
+    case favourites = "Избранное"
+    case haveNoFavouritesListsYet = "У Вас пока нет избранных списков"
+    case appLanguage = "Язык приложения"
+    case aboutApp = "О приложении"
 }

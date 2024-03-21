@@ -11,25 +11,24 @@ extension MainView {
     @MainActor
     final class ViewModel: ObservableObject {
 
-        // MARK: - Nested types
-
-        enum TabBar {
-            case main
-            case settings
-        }
-
         // MARK: - Properties
 
         @Published var isMainShows: Bool = true
 
-        @Published var selectedFolderModelID: FolderModel.ID?
+        @Published var selectedBaseFolderModelID: BaseFolderModel.ID?
 
-        private (set) var folderModel = FolderModel.model
+        private (set) var folderModel = BaseFolderModel.model
 
         // MARK: - Initializers
 
         init() {
-            selectedFolderModelID = FolderModel.model.first?.id
+            selectedBaseFolderModelID = BaseFolderModel.model.first?.id
+        }
+
+        // MARK: - Instance methods
+
+        func isFirstFolder() -> Bool {
+            selectedBaseFolderModelID == folderModel.first?.id
         }
     }
 }
