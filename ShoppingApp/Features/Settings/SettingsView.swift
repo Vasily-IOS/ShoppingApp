@@ -33,8 +33,10 @@ struct SettingsView: View {
                             } else {
                                 Image(uiImage: UIImage(data: avatar ?? Data()) ?? UIImage())
                                     .resizable()
-                                    .frame(width: 55, height: 55)
-                                    .cornerRadius(27.5)
+                                        .scaledToFill()
+                                        .frame(width: 55, height: 55, alignment: .center)
+                                        .cornerRadius(27.5)
+                                        .clipped()
                             }
                         }
                         Text("\(AssetString.hello.rawValue), \(userName ?? AssetString.friend.rawValue)!")
@@ -128,7 +130,6 @@ struct SettingsView: View {
                         .cornerRadius(30)
                 }
                 .padding(.bottom)
-//                .padding(.bottom, geometry.size.height * 0.15)
             }
         }
         .edgesIgnoringSafeArea(.top)
