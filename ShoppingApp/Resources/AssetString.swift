@@ -38,4 +38,6 @@ enum AssetString: String {
     case haveNoFavouritesListsYet = "У Вас пока нет избранных списков"
     case appLanguage = "Язык приложения"
     case aboutApp = "О приложении"
+    case hello = "Привет"
+    case friend = "Друг"
 }

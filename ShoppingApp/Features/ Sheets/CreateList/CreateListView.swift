@@ -57,12 +57,12 @@ struct CreateListView: View {
                 }
                 .padding(.trailing, 40)
             }
+            .padding(.top, 25)
 
             Spacer()
         }
         .padding(.top, 20)
     }
-
 }
 
 #Preview {

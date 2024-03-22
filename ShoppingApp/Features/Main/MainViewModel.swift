@@ -13,8 +13,6 @@ extension MainView {
 
         // MARK: - Properties
 
-        @Published var isMainShows: Bool = true
-
         @Published var selectedBaseFolderModelID: BaseFolderModel.ID?
 
         private (set) var folderModel = BaseFolderModel.model

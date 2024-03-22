@@ -10,4 +10,5 @@ import Foundation
 enum Config: String {
     case onboardingShownKey = "onboardingShownKey"
     case userNameKey = "userNameKey"
+    case avatarKey = "avatarKey"
 }
