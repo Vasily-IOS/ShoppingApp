@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF03AD942BAC926900945091 /* AppTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF03AD932BAC926900945091 /* AppTabBarContainerView.swift */; };
+		FF03AD982BAC9C0600945091 /* AppTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF03AD972BAC9C0600945091 /* AppTabBar.swift */; };
+		FF03AD9A2BAC9DE300945091 /* AppTabBarItemPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF03AD992BAC9DE300945091 /* AppTabBarItemPreferenceKey.swift */; };
+		FF1F4BD72BADB207003610B6 /* AppTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1F4BD62BADB207003610B6 /* AppTabBarView.swift */; };
+		FF1F4BD92BADCF2D003610B6 /* AppTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1F4BD82BADCF2D003610B6 /* AppTabBarItem.swift */; };
+		FF1F4BDB2BADCF50003610B6 /* AppTabBarItemViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1F4BDA2BADCF50003610B6 /* AppTabBarItemViewModifier.swift */; };
+		FF1F4BDE2BADD776003610B6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1F4BDD2BADD776003610B6 /* SettingsView.swift */; };
+		FF1F4BE02BADD787003610B6 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1F4BDF2BADD787003610B6 /* SettingsViewModel.swift */; };
 		FF330D572BA8B45B00CEC039 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF330D562BA8B45B00CEC039 /* OnboardingView.swift */; };
 		FF330D5A2BA8B48E00CEC039 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF330D592BA8B48E00CEC039 /* SplashScreen.swift */; };
 		FF330D5D2BA8B4EE00CEC039 /* AssetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF330D5C2BA8B4EE00CEC039 /* AssetImage.swift */; };
@@ -59,6 +67,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF03AD932BAC926900945091 /* AppTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarContainerView.swift; sourceTree = "<group>"; };
+		FF03AD972BAC9C0600945091 /* AppTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBar.swift; sourceTree = "<group>"; };
+		FF03AD992BAC9DE300945091 /* AppTabBarItemPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarItemPreferenceKey.swift; sourceTree = "<group>"; };
+		FF1F4BD62BADB207003610B6 /* AppTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarView.swift; sourceTree = "<group>"; };
+		FF1F4BD82BADCF2D003610B6 /* AppTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarItem.swift; sourceTree = "<group>"; };
+		FF1F4BDA2BADCF50003610B6 /* AppTabBarItemViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarItemViewModifier.swift; sourceTree = "<group>"; };
+		FF1F4BDD2BADD776003610B6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FF1F4BDF2BADD787003610B6 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		FF330D562BA8B45B00CEC039 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		FF330D592BA8B48E00CEC039 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		FF330D5C2BA8B4EE00CEC039 /* AssetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetImage.swift; sourceTree = "<group>"; };
@@ -121,11 +137,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF1F4BD32BADA965003610B6 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				FF03AD972BAC9C0600945091 /* AppTabBar.swift */,
+				FF1F4BD62BADB207003610B6 /* AppTabBarView.swift */,
+				FF03AD932BAC926900945091 /* AppTabBarContainerView.swift */,
+				FF03AD992BAC9DE300945091 /* AppTabBarItemPreferenceKey.swift */,
+				FF1F4BD82BADCF2D003610B6 /* AppTabBarItem.swift */,
+				FF1F4BDA2BADCF50003610B6 /* AppTabBarItemViewModifier.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		FF1F4BDC2BADD759003610B6 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FF1F4BDD2BADD776003610B6 /* SettingsView.swift */,
+				FF1F4BDF2BADD787003610B6 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		FF330D552BA8B41D00CEC039 /* Features */ = {
 			isa = PBXGroup;
 			children = (
 				FFA91CCE2BAB269B00038C89 /* MockView.swift */,
 				FF330D742BA8D63300CEC039 /* Main */,
+				FF1F4BDC2BADD759003610B6 /* Settings */,
 				FF330D612BA8BD0700CEC039 /* EnterName */,
 				FF330D582BA8B46700CEC039 /* Onboarding */,
 				FFA91CD52BAB312200038C89 /*  Sheets */,
@@ -180,6 +219,7 @@
 				FFDB1BE22B98DBB30006523A /* ShoppingApp.swift */,
 				FF330D592BA8B48E00CEC039 /* SplashScreen.swift */,
 				FFDB1BE42B98DBB30006523A /* ContentView.swift */,
+				FF1F4BD32BADA965003610B6 /* TabBar */,
 				FF330D792BA8D95800CEC039 /* Coordinator */,
 			);
 			path = Core;
@@ -441,8 +481,12 @@
 				FF330D812BA8FDB100CEC039 /* OnboardingShownView.swift in Sources */,
 				FF330D762BA8D63E00CEC039 /* MainView.swift in Sources */,
 				FF330D5A2BA8B48E00CEC039 /* SplashScreen.swift in Sources */,
+				FF1F4BDE2BADD776003610B6 /* SettingsView.swift in Sources */,
 				FFA91CDA2BAB316100038C89 /* CreateListViewModel.swift in Sources */,
+				FF1F4BD92BADCF2D003610B6 /* AppTabBarItem.swift in Sources */,
 				FF330D672BA8C7E000CEC039 /* Extension + View.swift in Sources */,
+				FF03AD982BAC9C0600945091 /* AppTabBar.swift in Sources */,
+				FF03AD9A2BAC9DE300945091 /* AppTabBarItemPreferenceKey.swift in Sources */,
 				FF330D832BA8FDBF00CEC039 /* OnboardingNotShowedView.swift in Sources */,
 				FF330D692BA8CDCE00CEC039 /* EnterNameViewModel.swift in Sources */,
 				FF330D602BA8B77A00CEC039 /* Extension + UIColor.swift in Sources */,
@@ -452,16 +496,20 @@
 				FF330D852BA903BA00CEC039 /* PageControl.swift in Sources */,
 				FF330D572BA8B45B00CEC039 /* OnboardingView.swift in Sources */,
 				FF330D5D2BA8B4EE00CEC039 /* AssetImage.swift in Sources */,
+				FF1F4BE02BADD787003610B6 /* SettingsViewModel.swift in Sources */,
 				FF330D782BA8D82D00CEC039 /* OnboardingModel.swift in Sources */,
 				FF330D732BA8D4FD00CEC039 /* Config.swift in Sources */,
 				FFDB1BE52B98DBB30006523A /* ContentView.swift in Sources */,
+				FF1F4BD72BADB207003610B6 /* AppTabBarView.swift in Sources */,
 				FFA91CCF2BAB269B00038C89 /* MockView.swift in Sources */,
 				FF8910192BA9A0DD006381B4 /* MainModel.swift in Sources */,
 				FFDB1BE32B98DBB30006523A /* ShoppingApp.swift in Sources */,
+				FF1F4BDB2BADCF50003610B6 /* AppTabBarItemViewModifier.swift in Sources */,
 				FFA91CD22BAB286900038C89 /* CreateFolderView.swift in Sources */,
 				FF330D7C2BA8DE8A00CEC039 /* OnboardingPageView.swift in Sources */,
 				FF330D7F2BA8FA4100CEC039 /* OnboardingService.swift in Sources */,
 				FFA91CD82BAB315100038C89 /* CreateListView.swift in Sources */,
+				FF03AD942BAC926900945091 /* AppTabBarContainerView.swift in Sources */,
 				FF89101B2BA9A0E6006381B4 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

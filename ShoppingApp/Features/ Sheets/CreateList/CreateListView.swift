@@ -62,7 +62,6 @@ struct CreateListView: View {
         }
         .padding(.top, 20)
     }
-
 }
 
 #Preview {

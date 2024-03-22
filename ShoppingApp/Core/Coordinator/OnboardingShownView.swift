@@ -15,7 +15,7 @@ struct OnboardingShownView: View {
 
     var body: some View {
         NavigationStack(path: $coordinator.path) {
-            coordinator.build(.main)
+            coordinator.build(.tabBar)
                 .navigationDestination(for: AppCoordinator.Page.self) { page in
                     coordinator.build(page)
                 }

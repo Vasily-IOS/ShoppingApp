@@ -12,6 +12,7 @@ final class AppCoordinator: ObservableObject {
     // MARK: - Nested Types
 
     enum Page: Identifiable, Hashable {
+        case tabBar
         case enterName
         case onboarding(userName: String)
         case main
@@ -62,6 +63,8 @@ final class AppCoordinator: ObservableObject {
     @ViewBuilder
     func build(_ page: Page) -> some View {
         switch page {
+        case .tabBar:
+            AppTabBar()
         case .enterName:
             EnterNameView()
         case .onboarding(let userName):
