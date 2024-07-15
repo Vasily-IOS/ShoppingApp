@@ -22,7 +22,7 @@ struct CreateListView: View {
 
             TextField("", text: $viewModel.newListName, prompt: Text(AssetString.listNamе.rawValue)
                 .font(.system(size: 16)))
-                .padding(.horizontal, 16)
+                 .padding(.horizontal, 16)
 
             Rectangle()
                 .frame(height: 1)

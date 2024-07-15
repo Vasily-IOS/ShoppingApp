@@ -30,3 +30,7 @@ struct SplashScreen: View {
         .background(Color(uiColor: .mainOrange))
     }
 }
+
+#Preview {
+    SplashScreen(isCanHide: .constant(true))
+}

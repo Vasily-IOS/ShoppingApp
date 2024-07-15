@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  OnboardingShowedView.swift
 //  ShoppingApp
 //
 //  Created by Василий on 19.03.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OnboardingShownView: View {
+struct OnboardingShowedView: View {
     
     // MARK: - Properties
 
@@ -29,5 +29,5 @@ struct OnboardingShownView: View {
 }
 
 #Preview {
-    OnboardingShownView()
+    OnboardingShowedView()
 }

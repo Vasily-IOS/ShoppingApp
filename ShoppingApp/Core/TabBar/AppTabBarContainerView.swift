@@ -32,9 +32,9 @@ struct AppTabBarContainerView<Content: View>: View {
             }
             AppTabBarView(tabs: tabs, selection: $selection)
         }
-        .onPreferenceChange(AppTabBarItemPreferenceKey.self, perform: { value in
+        .onPreferenceChange(AppTabBarItemPreferenceKey.self) { value in
             self.tabs = value
-        })
+        }
     }
 }
 

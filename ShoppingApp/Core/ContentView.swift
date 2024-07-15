@@ -17,7 +17,7 @@ struct ContentView: View {
 
     var body: some View {
         if onboardingService.isOnboardingShown {
-            OnboardingShownView()
+            OnboardingShowedView()
         } else {
            OnboardingNotShowedView()
         }

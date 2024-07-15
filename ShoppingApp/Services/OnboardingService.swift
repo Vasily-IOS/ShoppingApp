@@ -11,7 +11,7 @@ final class OnboardingService: ObservableObject {
 
     // MARK: - Properties
 
-    @Published var isOnboardingShown: Bool = false
+    @Published var isOnboardingShown = false
 
     static let shared = OnboardingService()
 

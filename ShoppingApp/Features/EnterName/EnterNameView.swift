@@ -36,7 +36,6 @@ struct EnterNameView: View {
                             .padding(16)
                             .background(.white)
                             .cornerRadius(10)
-//                            .frame(height: 56)
                     }
 
                     Button {
